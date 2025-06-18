@@ -2,10 +2,10 @@ const http = require('http')
 const fs = require('fs')
 const port = process.env.PORT || 3000
 
-function serveStaticFile(res, path, contentType, responseCode = 200) {
-    console.log(__dirname)
+function serveStaticFile (res, path, contentType, responseCode = 200) {
+  console.log(__dirname)
   fs.readFile(__dirname + path, (err, data) => {
-    if(err) {
+    if (err) {
       res.writeHead(500, { 'Content-Type': 'text/plain' })
       return res.end('500 - Internal Error')
     }
@@ -16,7 +16,7 @@ function serveStaticFile(res, path, contentType, responseCode = 200) {
 
 const path = require('path');
 
-const server = http.createServer((req,res) => {
+const server = http.createServer((req, res) => {
   // оптимизируем запрос
   const normalizedUrl = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase();
 
@@ -41,5 +41,5 @@ const server = http.createServer((req,res) => {
   }
 });
 
-server.listen(port, () => console.log(`сервер стартовал, порт 3000 ${port}; ` +
+server.listen(port, () => console.log(`сервер стартовал, порт ${port}; ` +
   'нажмите Ctrl-C для остановки....'))

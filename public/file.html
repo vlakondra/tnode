@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Пример HTML с таблицами стилей</title>
+    <style>
+        /* Стили для тела страницы */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+            color: #333;
+        }
+
+        /* Стили для заголовка */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Стили для таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Стили для ячеек таблицы */
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Стили для заголовков таблицы */
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Чередование цвета строк */
+        tbody tr:nth-child(even) {
+            background-color: #f2f8fc;
+        }
+
+        /* Эффект при наведении */
+        tbody tr:hover {
+            background-color: #d6eaff;
+        }
+    </style>
+</head>
+
+<body>
+    <h5>Caption</h5>
+    <h1>Пример таблицы</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Возраст</th>
+                <th>Город</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Алиса</td>
+                <td>28</td>
+                <td>Москва</td>
+            </tr>
+            <tr>
+                <td>Борис</td>
+                <td>35</td>
+                <td>Санкт-Петербург</td>
+            </tr>
+            <tr>
+                <td>Виктория</td>
+                <td>22</td>
+                <td>Новосибирск</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

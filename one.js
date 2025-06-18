@@ -2,9 +2,13 @@ const http = require('http')
 const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain;charset=UTF-8' })
+  console.log(req.url, req.httpVersion)
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
   res.end('Hello мир!')
 })
 
-server.listen(port, () => console.log(`server started on port ${port}; ` +
-  'press Ctrl-C to terminate....'))
+server.listen(port, () => console.log(`сервер стартовал, порт  ${port}; ` +
+  'нажмите Ctrl-C для остановки....'))
+
+
+//https://nodejsdev.ru/  
